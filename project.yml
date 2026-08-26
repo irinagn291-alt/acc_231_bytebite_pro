@@ -1,0 +1,79 @@
+name: ByteBite
+options:
+  bundleIdPrefix: com.bytebite
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+packages:
+  ByteKit:
+    path: Packages/ByteKit
+  Alamofire:
+    url: https://github.com/wrandecima-bit/Alamofire
+    revision: 7fdd403089757be2ce6991b287c7bef612c8bd04
+settings:
+  base:
+    SWIFT_VERSION: "6.2"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+targets:
+  ByteBite:
+    type: application
+    platform: iOS
+    sources:
+      - path: ByteBite
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bytebite.kitchen
+        PRODUCT_NAME: ByteBite
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        INFOPLIST_KEY_CFBundleDisplayName: ByteBite
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_UIImageName: byb_Splash
+        INFOPLIST_KEY_UILaunchScreen_UIColorName: byb_background
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        INFOPLIST_KEY_UIUserInterfaceStyle: Dark
+        INFOPLIST_KEY_NSCameraUsageDescription: ByteBite reads barcodes to score points for what you log.
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.healthcare-fitness
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: "1.0.0"
+        SWIFT_STRICT_CONCURRENCY: complete
+        SWIFT_VERSION: "6.2"
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGNING_ALLOWED: "NO"
+        CODE_SIGNING_REQUIRED: "NO"
+        CODE_SIGN_IDENTITY: ""
+        ENABLE_TESTABILITY: YES
+    dependencies:
+      - package: ByteKit
+        product: ByteKit
+      - package: Alamofire
+  ByteBiteTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ByteBiteTests
+    dependencies:
+      - target: ByteBite
+      - package: ByteKit
+        product: ByteKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bytebite.kitchen.tests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_STRICT_CONCURRENCY: complete
+        SWIFT_VERSION: "6.2"
+        BUNDLE_LOADER: $(TEST_HOST)
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/ByteBite.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ByteBite
+schemes:
+  ByteBite:
+    build:
+      targets:
+        ByteBite: all
+        ByteBiteTests: [test]
+    test:
+      targets:
+        - ByteBiteTests

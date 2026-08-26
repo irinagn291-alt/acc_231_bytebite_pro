@@ -1,0 +1,14 @@
+{
+  "originHash" : "f2c8f4c54d95a6715d62e2f78b031074c6c22f390e9ab2325527a8f35acd0d87",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrandecima-bit/Alamofire",
+      "state" : {
+        "revision" : "7fdd403089757be2ce6991b287c7bef612c8bd04"
+      }
+    }
+  ],
+  "version" : 3
+}

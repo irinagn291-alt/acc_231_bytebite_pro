@@ -1,0 +1,11 @@
+Initial release of ByteBite.
+
+• Onboarding with daily target setup for kcal, protein, carbs, and fat
+• Swipeable today, log, plan, wish, and profile cards
+• catalog query and scan frame to find products via Open Food Facts
+• commit card to log grams, meal slot, and eaten or planned entries
+• XP, levels, combo lock, streak flame, freeze tokens, and badge grid
+• horizon planning for the next 14 cycles
+• wish register for saved products
+• score ledger to edit targets, re-run boot sequence, or reset all data
+• contact bytebite.pro from profile

@@ -1,0 +1,1 @@
+calorie,macro,barcode,food,log,tracker,nutrition,streak,diary,portion,plan,wish

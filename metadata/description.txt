@@ -1,0 +1,15 @@
+ByteBite is an offline-first calorie and macro tracker for people who want a terminal-style food log. Search Open Food Facts or scan a barcode, commit portions, and earn XP while tracking daily targets.
+
+• Swipeable card stack with today, log, plan, wish, and profile
+• intake buffer shows daily kcal, protein, carbs, and fat against your targets
+• catalog query searches Open Food Facts and merges results with a bundled local shelf
+• scan frame reads barcodes with the camera or accepts manual entry
+• commit card sets grams, slot (boot, runtime, shutdown, interrupt), and eaten today or a future cycle
+• XP per eaten commit, combo multiplier when macros land within target band, levels, and streak with freeze tokens
+• entry stack browses past days and lets you purge rows
+• horizon shows planned packets across the next 14 cycles
+• wish register stores barcode-unique items you can promote to commit
+• score ledger shows level, badge grid, editable targets, and reset all data
+• Onboarding sets daily kcal, protein, carbs, and fat targets
+
+Nutrition data from Open Food Facts. Not medical advice. All data stays on your device.
