@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80B96ECCC85A8A5CDE52EBE8 /* ContactWebSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0859C400C6FC8EE3ABE89D /* ContactWebSheet.swift */; };
-		6205BCE8488B2338741261D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF7B82FD19F72BEBF5195 /* AppDelegate.swift */; };
-		D2D55DD3ACB4603C40BD7B37 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944F144A86ADA8BCC29B6C7 /* APIConfig.swift */; };
+		07DD8BC096F7D73BF0507B5C /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D5ACF06AD29B8CEF4DF5B /* APIConfig.swift */; };
 		087FFD8BBC71AB0B78CB9EE2 /* PhosphorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B0E92258B7BC31C87650A4 /* PhosphorTheme.swift */; };
 		0E242E0B804F56BFD367C564 /* CatalogQueryProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF200F3AD90826C83C85C1C8 /* CatalogQueryProcessor.swift */; };
 		14A4D62CBDCB22B18AF42D44 /* GlyphThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AF83423A743A9A1737CF8 /* GlyphThumb.swift */; };
@@ -19,6 +17,7 @@
 		277412726F3588778B8D2BD1 /* LocalShelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374A3BD7ECE0FD91A1E6AF3 /* LocalShelf.swift */; };
 		2D02D5D742F9EF97F6BDB812 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CE090BA8ED336D5D099D5938 /* PrivacyInfo.xcprivacy */; };
 		2DA8BDA4AE0EF09D62109133 /* PortionAndBarcodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1D9BDF6454EB52060C8F10 /* PortionAndBarcodeTests.swift */; };
+		2DAFDFB0C3E766DC16C605BB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 579D9F274AC0868B6CE3D584 /* Alamofire */; };
 		31314CAD8B738EA5231794BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E31298B03241D7444DE61 /* Assets.xcassets */; };
 		31A63CF64A18521558E4BA69 /* BootSequenceRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA21F0E9A22B5AC145ABCC7 /* BootSequenceRenderer.swift */; };
 		356481EA770EB9802075B832 /* ByteKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5FF95DF17B5A48A4B29CD85F /* ByteKit */; };
@@ -26,6 +25,7 @@
 		417AC3888D7E3689DA31D361 /* CatalogProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F663BFA2A586A849E18C56CF /* CatalogProbe.swift */; };
 		5362A4FC97BAEAAA353CB1A5 /* WishRegisterProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B6AB454E9B2A0926D7DA15 /* WishRegisterProcessor.swift */; };
 		54424540D245952E540466F4 /* KitchenKernel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB8DD2C3BD619258AF6370 /* KitchenKernel.swift */; };
+		60EE03107BDEB3588E235E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8F7A477CD563CAD408D3 /* AppDelegate.swift */; };
 		6D1616DD3A807F23EF6D30AF /* DemoSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C28957AE1332AA7F3AA254 /* DemoSeed.swift */; };
 		736DE23967685B90FDCFAD96 /* PortionMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174DE2244883BE7A3C64CC6A /* PortionMath.swift */; };
 		768BD520323690D3F2102EE6 /* RootRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA6F21AA57D4252633A6D3 /* RootRenderer.swift */; };
@@ -38,6 +38,7 @@
 		A33A0609DA43B24A464C4944 /* ScanFrameProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8E2998979A3270913DB37E /* ScanFrameProcessor.swift */; };
 		AEBCD567A9E62DF29D4F5B5B /* CardDeckRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3784B3D03431EBA2A20F92 /* CardDeckRenderer.swift */; };
 		B2B11E5AE1E438B0DDF7CCC3 /* Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5014658DD4DF8A34B100E49B /* Intents.swift */; };
+		B2F7B6BDCB7910C66276CC36 /* ContactWebSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8F82ED6847792AE242D7A /* ContactWebSheet.swift */; };
 		B42F889100E75E2D1A00B33F /* DeckProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72DEA77195B2D8387116D9E /* DeckProcessor.swift */; };
 		BE88690C9C5E55F76FAAB6C0 /* BarcodeGlyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835EEA268CA88CC07D9D69F /* BarcodeGlyph.swift */; };
 		C2C9750763D7F493D1864AB2 /* ScanCaptureBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895259A08E5AFA54216C72C8 /* ScanCaptureBox.swift */; };
@@ -68,12 +69,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B0859C400C6FC8EE3ABE89D /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
-		332DF7B82FD19F72BEBF5195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9944F144A86ADA8BCC29B6C7 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		01B6AB454E9B2A0926D7DA15 /* WishRegisterProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRegisterProcessor.swift; sourceTree = "<group>"; };
 		0374A3BD7ECE0FD91A1E6AF3 /* LocalShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalShelf.swift; sourceTree = "<group>"; };
 		08EABB9AE0B482C72C20AAC9 /* OverlayProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayProcessor.swift; sourceTree = "<group>"; };
+		15C8F82ED6847792AE242D7A /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
 		174DE2244883BE7A3C64CC6A /* PortionMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortionMath.swift; sourceTree = "<group>"; };
 		17B90541BF7CFEF8DAB6EB8D /* EntryStackProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryStackProcessor.swift; sourceTree = "<group>"; };
 		1F3784B3D03431EBA2A20F92 /* CardDeckRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckRenderer.swift; sourceTree = "<group>"; };
@@ -99,7 +98,9 @@
 		90EB52E3F546320F14F1830D /* ByteBiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteBiteApp.swift; sourceTree = "<group>"; };
 		985AF83423A743A9A1737CF8 /* GlyphThumb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphThumb.swift; sourceTree = "<group>"; };
 		A01A57B67B89068A8F9CC3E4 /* ScoreLedgerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLedgerRenderer.swift; sourceTree = "<group>"; };
+		A04E8F7A477CD563CAD408D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A05BAA1A27F7400F227CD838 /* ByteKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ByteKit; path = Packages/ByteKit; sourceTree = SOURCE_ROOT; };
+		B35D5ACF06AD29B8CEF4DF5B /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		C2DF45B42373AE00DD9EC114 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		CDEFF221962EEED64C2ABAEB /* DomainGlyphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainGlyphs.swift; sourceTree = "<group>"; };
 		CE090BA8ED336D5D099D5938 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				356481EA770EB9802075B832 /* ByteKit in Frameworks */,
+				2DAFDFB0C3E766DC16C605BB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,11 +177,11 @@
 		7EE95ABEB8F85433C00A7F95 /* ByteBite */ = {
 			isa = PBXGroup;
 			children = (
+				B35D5ACF06AD29B8CEF4DF5B /* APIConfig.swift */,
+				A04E8F7A477CD563CAD408D3 /* AppDelegate.swift */,
 				FC7E31298B03241D7444DE61 /* Assets.xcassets */,
 				90EB52E3F546320F14F1830D /* ByteBiteApp.swift */,
-				7B0859C400C6FC8EE3ABE89D /* ContactWebSheet.swift */,
-				332DF7B82FD19F72BEBF5195 /* AppDelegate.swift */,
-				9944F144A86ADA8BCC29B6C7 /* APIConfig.swift */,
+				15C8F82ED6847792AE242D7A /* ContactWebSheet.swift */,
 				CE090BA8ED336D5D099D5938 /* PrivacyInfo.xcprivacy */,
 				0323708403675924FC12662D /* Intents */,
 				CE68F5FE679EBEA099C53C59 /* Kernel */,
@@ -283,8 +285,8 @@
 			);
 			name = ByteBite;
 			packageProductDependencies = (
-				42C0468528635CEBCA001D9D /* Alamofire */,
 				5FF95DF17B5A48A4B29CD85F /* ByteKit */,
+				579D9F274AC0868B6CE3D584 /* Alamofire */,
 			);
 			productName = ByteBite;
 			productReference = 77542E7EC8D42CEF6C6A9C7C /* ByteBite.app */;
@@ -334,7 +336,7 @@
 			mainGroup = 973EF3A59B2C82EA220C6539;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9FFDBF8C84C2C35A33577B77 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FF27657EF12483E8B3AFEEC4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				02B91F284919C6D9EFB9A05D /* XCLocalSwiftPackageReference "Packages/ByteKit" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -374,9 +376,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80B96ECCC85A8A5CDE52EBE8 /* ContactWebSheet.swift in Sources */,
-				6205BCE8488B2338741261D9 /* AppDelegate.swift in Sources */,
-				D2D55DD3ACB4603C40BD7B37 /* APIConfig.swift in Sources */,
+				07DD8BC096F7D73BF0507B5C /* APIConfig.swift in Sources */,
+				60EE03107BDEB3588E235E04 /* AppDelegate.swift in Sources */,
 				BE88690C9C5E55F76FAAB6C0 /* BarcodeGlyph.swift in Sources */,
 				DFE81F32FE6BA72E7A1B5FCA /* BootSequenceProcessor.swift in Sources */,
 				31A63CF64A18521558E4BA69 /* BootSequenceRenderer.swift in Sources */,
@@ -387,6 +388,7 @@
 				ED9B76D6CC26B10913060994 /* CatalogQueryRenderer.swift in Sources */,
 				FC228D52F39FA9AA000E6039 /* CommitCardProcessor.swift in Sources */,
 				DE38777019A9F5A0D518B48B /* CommitCardRenderer.swift in Sources */,
+				B2F7B6BDCB7910C66276CC36 /* ContactWebSheet.swift in Sources */,
 				B42F889100E75E2D1A00B33F /* DeckProcessor.swift in Sources */,
 				6D1616DD3A807F23EF6D30AF /* DemoSeed.swift in Sources */,
 				78F03601F362BF5D0A1CAFD1 /* DomainGlyphs.swift in Sources */,
@@ -457,7 +459,7 @@
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ByteBite;
@@ -467,9 +469,9 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_UIColorName = byb_background;
 				INFOPLIST_KEY_UILaunchScreen_UIImageName = byb_Splash;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,7 +633,7 @@
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ByteBite;
@@ -641,9 +643,9 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_UIColorName = byb_background;
 				INFOPLIST_KEY_UILaunchScreen_UIImageName = byb_Splash;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -698,10 +700,21 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		FF27657EF12483E8B3AFEEC4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
+			requirement = {
+				kind = revision;
+				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		42C0468528635CEBCA001D9D /* Alamofire */ = {
+		579D9F274AC0868B6CE3D584 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9FFDBF8C84C2C35A33577B77 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = FF27657EF12483E8B3AFEEC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		5FF95DF17B5A48A4B29CD85F /* ByteKit */ = {
@@ -713,17 +726,6 @@
 			productName = ByteKit;
 		};
 /* End XCSwiftPackageProductDependency section */
-/* Begin XCRemoteSwiftPackageReference section */
-		9FFDBF8C84C2C35A33577B77 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
-			requirement = {
-				kind = revision;
-				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 	};
 	rootObject = D8F194123856564B1C1B2C1C /* Project object */;
 }
