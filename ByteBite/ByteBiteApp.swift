@@ -14,6 +14,8 @@ struct ByteBiteApp: App {
     var body: some Scene {
         WindowGroup {
             rootView
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(PhosphorPalette.background.ignoresSafeArea())
                 .onAppear { performRegistration() }
         }
         .onChange(of: scenePhase) { _, phase in

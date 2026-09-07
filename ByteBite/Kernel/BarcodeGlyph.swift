@@ -25,8 +25,8 @@ enum BarcodeGlyph: Sendable {
                 out.append(code)
             }
         }
-        for run in digitRuns(raw) {
-            guard (8...14).contains(run.count) else { continue }
+        func emit(_ run: String) {
+            guard (8...14).contains(run.count) else { return }
             if run.count == 12 {
                 push("0" + run)
             } else {
@@ -36,7 +36,36 @@ enum BarcodeGlyph: Sendable {
                 push(expanded)
             }
         }
+        let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        if let urlCode = fromURL(trimmed) {
+            emit(urlCode)
+        }
+        let runs = digitRuns(trimmed)
+        for run in runs where run.count == 13 {
+            emit(run)
+        }
+        for run in runs where run.count != 13 {
+            emit(run)
+        }
         return out
+    }
+
+    /// Pulls EAN/GTIN from a QR URL (query keys or path segments).
+    static func fromURL(_ raw: String) -> String? {
+        guard let url = URL(string: raw), url.scheme != nil else { return nil }
+        let keys: Set<String> = ["ean", "ean13", "ean_13", "gtin", "code", "barcode"]
+        if let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems {
+            for item in items {
+                guard keys.contains(item.name.lowercased()), let value = item.value else { continue }
+                let digits = value.filter(\.isNumber)
+                if (8...14).contains(digits.count) { return digits }
+            }
+        }
+        for part in url.pathComponents.reversed() {
+            let digits = part.filter(\.isNumber)
+            if (8...14).contains(digits.count) { return digits }
+        }
+        return nil
     }
 
     static func normalize(_ raw: String) -> String? {

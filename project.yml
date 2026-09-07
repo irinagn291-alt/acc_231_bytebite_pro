@@ -31,8 +31,8 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_UIImageName: byb_Splash
         INFOPLIST_KEY_UILaunchScreen_UIColorName: byb_background
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait
-        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UIRequiresFullScreen: NO
         INFOPLIST_KEY_UIUserInterfaceStyle: Dark
         INFOPLIST_KEY_NSCameraUsageDescription: ByteBite reads barcodes to score points for what you log.
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.healthcare-fitness

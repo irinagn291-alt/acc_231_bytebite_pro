@@ -19,8 +19,10 @@ final class ScanFrameProcessor: ObservableObject {
         switch intent {
         case .appear:
             model.samples = LocalShelf.records
-        case .disappear, .appBackgrounded:
+        case .disappear:
             model.shouldRunSession = false
+            resolveTask?.cancel()
+        case .appBackgrounded:
             resolveTask?.cancel()
         case .decoded(let raw):
             handleDecode(raw)

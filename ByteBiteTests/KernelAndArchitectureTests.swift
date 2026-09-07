@@ -142,3 +142,16 @@ final class ArchitectureTests: XCTestCase {
         XCTAssertEqual(jumped.top, .profile)
     }
 }
+
+@MainActor
+final class CatalogQueryOverlayTests: XCTestCase {
+    func testScanInsteadPresentsScanOverlay() {
+        let dir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString, isDirectory: true)
+        let defaults = UserDefaults(suiteName: "byb.test.scan.\(UUID().uuidString)") ?? .standard
+        let kernel = KitchenKernel(root: dir, defaults: defaults)
+        let overlay = OverlayProcessor()
+        let query = CatalogQueryProcessor(kernel: kernel, overlay: overlay)
+        query.dispatch(.openScan)
+        XCTAssertEqual(overlay.model.kind, .scan)
+    }
+}

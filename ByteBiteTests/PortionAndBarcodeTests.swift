@@ -22,6 +22,12 @@ final class PortionAndBarcodeTests: XCTestCase {
             BarcodeGlyph.normalize("https://world.openfoodfacts.org/product/3017620422003/nutella"),
             "3017620422003"
         )
+        XCTAssertEqual(
+            BarcodeGlyph.normalize("https://example.com/lookup?gtin=3046920029759"),
+            "3046920029759"
+        )
+        XCTAssertEqual(BarcodeGlyph.normalize("3046920029759"), "3046920029759")
+        XCTAssertEqual(LocalShelf.record("3046920029759")?.barcode, "3046920029759")
         XCTAssertNil(BarcodeGlyph.normalize("no-digits-here"))
         XCTAssertFalse(BarcodeGlyph.candidates("042100005264").isEmpty)
     }

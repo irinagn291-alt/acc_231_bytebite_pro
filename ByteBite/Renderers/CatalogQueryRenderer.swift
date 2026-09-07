@@ -56,7 +56,7 @@ struct CatalogQueryRenderer: View {
                 headline: "awaiting query",
                 line: "type a name. remote hits merge with the local shelf.",
                 actionTitle: "scan instead"
-            ) { processor.dispatch(.dismiss) }
+            ) { processor.dispatch(.openScan) }
         case .pending:
             Color.clear.frame(height: 44)
         case .loading:

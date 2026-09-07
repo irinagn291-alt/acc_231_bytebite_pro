@@ -6,7 +6,6 @@ import UIKit
 @MainActor
 struct ScanFrameRenderer: View {
     @ObservedObject var processor: ScanFrameProcessor
-    @State private var box = ScanCaptureBox()
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @FocusState private var focused: Bool
@@ -18,22 +17,11 @@ struct ScanFrameRenderer: View {
                 refreshPermission()
             }
             .onDisappear {
-                box.stop()
                 processor.dispatch(.disappear)
             }
             .onChange(of: scenePhase) { _, phase in
                 if phase == .background || phase == .inactive {
-                    box.stop()
                     processor.dispatch(.appBackgrounded)
-                } else if phase == .active, processor.model.shouldRunSession {
-                    box.start()
-                }
-            }
-            .onChange(of: processor.model.shouldRunSession) { _, run in
-                if run {
-                    if box.configure() { box.start() }
-                } else {
-                    box.stop()
                 }
             }
     }
@@ -57,7 +45,10 @@ struct ScanFrameRenderer: View {
 
             ZStack {
                 if model.shouldRunSession {
-                    ScanPreviewHost(box: box)
+                    ScanPreviewHost(
+                        onDecode: { raw in processor.dispatch(.decoded(raw)) },
+                        running: scenePhase == .active
+                    )
                 } else {
                     Image("byb_ScanOverlay")
                         .resizable()
@@ -128,6 +119,7 @@ struct ScanFrameRenderer: View {
             }
         }
         .padding(GridUnit.n(2))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(TextureBackdrop())
         .scrollDismissesKeyboard(.interactively)
         .onTapGesture { focused = false }
@@ -175,8 +167,6 @@ struct ScanFrameRenderer: View {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
             processor.applyPermission(.allowed, hasDevice: true)
-            box.onDecode = { raw in processor.dispatch(.decoded(raw)) }
-            if box.configure() { box.start() }
         case .denied:
             processor.applyPermission(.denied, hasDevice: true)
         case .restricted:
@@ -186,10 +176,6 @@ struct ScanFrameRenderer: View {
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 Task { @MainActor in
                     processor.applyPermission(granted ? .allowed : .denied, hasDevice: true)
-                    if granted {
-                        box.onDecode = { raw in processor.dispatch(.decoded(raw)) }
-                        if box.configure() { box.start() }
-                    }
                 }
             }
         @unknown default:

@@ -24,6 +24,10 @@ final class CatalogQueryProcessor: ObservableObject {
             scheduleQuery(immediate: true)
         case .pick(let record):
             overlay.dispatch(.present(.commit(record)))
+        case .openScan:
+            debounceTask?.cancel()
+            queryTask?.cancel()
+            overlay.dispatch(.present(.scan))
         case .dismiss:
             debounceTask?.cancel()
             queryTask?.cancel()

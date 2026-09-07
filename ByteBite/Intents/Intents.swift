@@ -34,6 +34,7 @@ enum CatalogQueryIntent: Sendable, Equatable {
     case editQuery(String)
     case retry
     case pick(GlyphRecord)
+    case openScan
     case dismiss
 }
 
